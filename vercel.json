@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "name":"auth _token",
+    "builds": [
+      {
+        "src": "src/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/*",
+        "dest": "src/api/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "src/index.js"
+      }
+    ]
+  }
+  
